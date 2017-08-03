@@ -1,10 +1,14 @@
-sudo: false
-
 language: ruby
-
 rvm:
   - 2.3.3
   - 2.4.0
-
 cache: bundler
-script: bundle exec middleman build
+script: bundle exec middleman build --clean
+deploy:
+  provider: s3
+  access_key_id: AKIAIPXRSMICX6X4ESXA
+  secret_access_key:
+    secure: zBaoHhI9+DkMtp4RWUdg8X4MwDZjZffX3on6ZBqNEtMz7LiYcnAv54ieDtTaJSdHtAc58NjwzEa2hulEGdVdhJLaLH93zMF9aioFSFsbTF4xqjNW9kAhw4Kd2LhWb8SfidK4Eiv/Kld9GrRwVBd93GxTYq1WJmXYII7+MFWvzRQ4XXTHLcq+5IBBOaRRPNWh6GfDBqs+S5yM8aU3kfrs35VvUzTSINlVx1U79xefS3evHbNdHws4HnaCWThsYEnILCitDiZt364zjMVvWIXIpI3r4UqRlKfGisREGs2zuXG0AdLAbVcltMJ7Onf6+oJXdkUWWdVwQ+lbnTwHCgU8X3V8tak74hwDsMp6KM5kVClk+JvAevwsGaBaNLdUnNXILqk+JTvRB6XcpHzRJtJv79qNe33B+/+gzmWXSuktmzQSYWH5LofxsUSLITyA908n2Lz4iI0HDa+9X2Gpo7R9UzOxi4+CBkJbgrEBS8Z0pE7fwtNNO2+O33nVovbrsq6U1t4BRZ3t2TGvQNMAq0tTDkyoXWfdSW96QDPc84WxUkYNp8v0D1542yJGqNZ4LIIxtDKhcs4SOvo91jsFug12CS+n4hwcnrnL9vC5K6OeQ6GrL/z5uYCU9VHid0vnN+iGM6IcW+QbKPP/pdHLi52cglGIPytBE3pUzEW6ogsMBmU=
+  bucket: "docs.talklifeclarity.com"
+  skip_cleanup: true
+  local_dir: build
