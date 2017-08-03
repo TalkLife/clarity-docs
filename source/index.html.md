@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - http
 
 toc_footers:
-  - <a href='https://talklifeclarity.com/app/keys'>View and Generate an API Key</a>
+  - <a href='https://talklifeclarity.com/app'>View and Generate an API Key</a>
 
 includes:
   - errors
@@ -32,7 +32,7 @@ Authorization: <API KEY HERE>
 
 > Make sure to replace `<API KEY HERE>` with your API key.
 
-Clarity API uses API keys to allow access to the API. You can register a new Clarity API key in our [dashboard](https://talklifeclarity.com/app/keys).
+Clarity API uses API keys to allow access to the API. You can register a new Clarity API key in our [dashboard](https://talklifeclarity.com/app).
 
 Clarity API expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
